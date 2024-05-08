@@ -3,10 +3,31 @@ a{
     text-decoration: none;
 }
 .home {
+    background-image: url("https://unsplash.com/photos/VxAwTeiqDao/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTF8fG1hc3NhZ2V8ZW58MHx8fHwxNzE1MTc2NjU5fDA&force=true&w=1920");
     height: 100vh; /* Set the height to 100% of the viewport height */
     display: flex; /* Use flexbox */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
+    position: relative;
+    overflow: hidden; /* Ensure overflow doesn't extend beyond the section */
+    background-size: cover; /* Ensure the background image covers the entire section */
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5; /* Adjust the opacity as needed */
+    background-color: black; /* Adjust the color as needed */
+}
+
+/* Text over the overlay image */
+.home .container {
+    position: relative;
+    z-index: 1; /* Ensure text appears above the overlay */
 }
 
 .fee-fitur {
@@ -16,7 +37,7 @@ a{
 
 .cta {
     background-color: #fce9d8;
-    height: 50vh; /* Set the height to 100% of the viewport height */
+    height: 100vh; /* Set the height to 100% of the viewport height */
     display: flex; /* Use flexbox */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
