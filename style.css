@@ -1,8 +1,43 @@
+body {
+    font-family: 'Montserrat', sans-serif; 
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;  /* Black */
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;  /* Bold */
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;  /* Bold */
+
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;  /* Regular */
+}
+
+.highlight {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;  /* Medium */
+}
+
 a{
     color: inherit; 
     text-decoration: none;
 }
-.home {
+
+.hero .container{
+    width: 50%;
+}
+
+.jumbotron {
     background-image: url("https://unsplash.com/photos/VxAwTeiqDao/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTF8fG1hc3NhZ2V8ZW58MHx8fHwxNzE1MTc2NjU5fDA&force=true&w=1920");
     height: 100vh; /* Set the height to 100% of the viewport height */
     display: flex; /* Use flexbox */
@@ -13,7 +48,7 @@ a{
     background-size: cover; /* Ensure the background image covers the entire section */
 }
 
-.home::before {
+.jumbotron::before {
     content: "";
     position: absolute;
     top: 0;
@@ -25,9 +60,22 @@ a{
 }
 
 /* Text over the overlay image */
-.home .container {
+.jumbotron .container {
     position: relative;
     z-index: 1; /* Ensure text appears above the overlay */
+}
+
+.tentang {
+    margin-bottom: 1rem;
+}
+
+.tentang img{
+    width: 30%;
+}
+
+.manfaat img{
+    width: 30%;
+    filter: invert(100%);
 }
 
 .fee-fitur {
